@@ -5,3 +5,23 @@ body {
 .car {
   height: 150px;
 }
+
+.east {
+  transform: rotate(0);
+  transition: transform 0.25s;
+}
+
+.south {
+  transform: rotate(90deg);
+  transition: transform 0.25s;
+}
+
+.west {
+  transform: rotate(180deg);
+  transition: transform 0.25s;
+}
+
+.north {
+  transform: rotate(-90deg);
+  transition: transform 0.25s;
+}
