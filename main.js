@@ -1,7 +1,7 @@
 var car = {
-  direction: '',
-  x: 10,
-  y: 10
+  direction: 'east',
+  x: 0,
+  y: 0
 };
 
 var $car = document.querySelector('.car');
@@ -24,6 +24,7 @@ function start() {
     car.x += 7;
     $car.style.left = (car.x.toString()) + 'px';
   } else if (car.direction === 'south') {
+    car.y += 7;
     $car.style.top = (car.y.toString()) + 'px';
   }
 }
