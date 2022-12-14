@@ -1,5 +1,6 @@
 body {
   background-color: rgb(40, 141, 38);
+  position: absolute;
 }
 
 .car {
