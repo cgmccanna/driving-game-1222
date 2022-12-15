@@ -1,7 +1,8 @@
 var car = {
   direction: 'east',
   x: 0,
-  y: 0
+  y: 0,
+  started: false
 };
 
 var $car = document.querySelector('.car');
