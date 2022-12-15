@@ -1,3 +1,5 @@
+var carGo;
+
 var car = {
   direction: 'east',
   x: 0,
@@ -22,16 +24,20 @@ document.addEventListener('keydown', function (event) {
 
 function start() {
   if (car.direction === 'east') {
-    car.x += 7;
+    car.x += 10;
     $car.style.left = (car.x.toString()) + 'px';
   } else if (car.direction === 'south') {
-    car.y += 7;
+    car.y += 10;
     $car.style.top = (car.y.toString()) + 'px';
   }
 }
 
 document.addEventListener('keydown', function (event) {
-  if (event.code === 'Space') {
-    setInterval(start, 16);
+  if (event.code === 'Space' && car.started === false) {
+    car.started = true;
+    carGo = setInterval(start, 16);
+  } else if (event.code === 'Space' && car.started === true) {
+    clearInterval(carGo);
+    car.started = false;
   }
 });
