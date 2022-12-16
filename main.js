@@ -29,6 +29,12 @@ function start() {
   } else if (car.direction === 'south') {
     car.y += 10;
     $car.style.top = (car.y.toString()) + 'px';
+  } else if (car.direction === 'north') {
+    car.y -= 10;
+    $car.style.top = (car.y.toString()) + 'px';
+  } else if (car.direction === 'west') {
+    car.x -= 10;
+    $car.style.left = (car.x.toString()) + 'px';
   }
 }
 
